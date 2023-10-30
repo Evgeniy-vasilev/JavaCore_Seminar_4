@@ -9,8 +9,11 @@ import java.util.List;
  * количества
  */
 public class Shop {
+    /** Массив покупателей */
     private List<Buyer> buyers;
+    /** Массив товаров */
     private List<Product> products;
+    /** Массив заказов */
     private List<Order> orders;
 
     public Shop() {
@@ -38,7 +41,7 @@ public class Shop {
     }
 
     /**
-     * Cоздание заказа и добавление в ArrayList (orders).
+     * Метод создания заказа и добавление в ArrayList (orders).
      *
      * @param buyer    - покупатель
      * @param product  - товар
@@ -62,6 +65,7 @@ public class Shop {
      * Печать всех заказов и общее количество заказов
      */
     public void print() {
+        /** Счетчик заказов */
         int count = 0;
 
         for (Order order : orders) {

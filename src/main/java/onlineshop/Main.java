@@ -5,6 +5,7 @@ package onlineshop;
  */
 public class Main {
     public static void main(String[] args) {
+        /** Экземпляр класса Shop */
         Shop shop = new Shop();
 /**
  * Создание покупателей и добавление в массив.
@@ -22,7 +23,9 @@ public class Main {
         shop.addProduct(product1);
         shop.addProduct(product2);
         shop.addProduct(product3);
-
+/**
+ * Создание заказов
+ */
         try {
             shop.makeOrder(buyer1, product1, 3);
             shop.makeOrder(buyer1, product2, 6);
@@ -30,7 +33,9 @@ public class Main {
         } catch (BuyerException | ProductException | QuantityException e) {
             System.out.println(e.getMessage());
         }
-
+/**
+ * Печать заказов
+ */
         shop.print();
     }
 }

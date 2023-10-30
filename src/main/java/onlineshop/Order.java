@@ -9,9 +9,13 @@ import lombok.*;
 @Getter
 @Setter
 public class Order {
+    /** Экземляр покупателя */
     private Buyer buyer;
+    /** Экземляр товара */
     private Product product;
+    /** Поле количество товара */
     private int quantity;
+    /** Поле итоговая стоимость */
     private double totalPrice;
 
     public Order(Buyer buyer, Product product, int quantity) {
